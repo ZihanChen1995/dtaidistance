@@ -75,7 +75,7 @@ def plot_warp(from_s, to_s, new_s, path, filename=None, fig=None, axs=None):
     axs[1].plot(to_s, label="To")
     axs[1].legend()
     lines = []
-    line_options = {'linewidth': 0.5, 'color': 'orange', 'alpha': 0.8}
+    line_options = {'linewidth': 1.0, 'color': 'green', 'alpha': 0.9}
     for r_c, c_c in path:
         if r_c < 0 or c_c < 0:
             continue
@@ -132,7 +132,7 @@ def plot_warping(s1, s2, path, filename=None, fig=None, axs=None,
     plt.tight_layout()
     lines = []
     if warping_line_options is None:
-        warping_line_options = {'linewidth': 0.5, 'color': 'orange', 'alpha': 0.8}
+        warping_line_options = {'linewidth': 1.0, 'color': 'green', 'alpha': 0.9}
     for r_c, c_c in path:
         if r_c < 0 or c_c < 0:
             continue
@@ -173,7 +173,7 @@ def plot_warping_single_ax(s1, s2, path, filename=None, fig=None, ax=None):
     ax.plot(s1)
     ax.plot(s2)
     lines = []
-    line_options = {'linewidth': 0.5, 'color': 'orange', 'alpha': 0.8}
+    line_options = {'linewidth': 1.0, 'color': 'green', 'alpha': 0.9}
     for r_c, c_c in path:
         if r_c < 0 or c_c < 0:
             continue
@@ -403,12 +403,12 @@ def plot_average(s1, s2, avg, path1, path2, filename=None, fig=None, ax=None):
         fig, ax = plt.subplots(nrows=1, ncols=1, sharex='all', sharey='all')
     elif fig is None or ax is None:
         raise TypeError(f'The fig and axs arguments need to be both None or both instantiated.')
-    ax.plot(s1, color='blue', alpha=0.5)
-    ax.plot(s2, color='blue', alpha=0.5)
-    ax.plot(avg, color='orange', linestyle='dashed', alpha=0.5)
+    ax.plot(s1, color='black', alpha=0.9)
+    ax.plot(s2, color='black', alpha=0.9)
+    ax.plot(avg, color='green', linestyle='dashed', alpha=0.5)
     # plt.tight_layout()
     # lines = []
-    # line_options = {'linewidth': 0.5, 'color': 'orange', 'alpha': 0.8}
+    # line_options = {'linewidth': 1.0, 'color': 'green', 'alpha': 0.9}
     # for r_c, c_c in path:
     #     if r_c < 0 or c_c < 0:
     #         continue
