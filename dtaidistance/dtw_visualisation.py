@@ -126,7 +126,7 @@ def plot_warping(s1, s2, path, filename=None, fig=None, axs=None,
     elif fig is None or axs is None:
         raise TypeError(f'The fig and axs arguments need to be both None or both instantiated.')
     if series_line_options is None:
-        series_line_options = {color='black', linewidth=2} # change the options of lines here
+        series_line_options = {'color':'black', 'linewidth':2} # change the options of lines here
     axs[0].plot(s1, **series_line_options)
     axs[1].plot(s2, **series_line_options)
     plt.tight_layout()
